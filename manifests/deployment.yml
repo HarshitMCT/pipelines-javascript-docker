@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: harshitmctpipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: harshitmctpipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: harshitmctpipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: harshitmctpipelinesjavascriptdocker 
+          image: mycontainerregistryhg.azurecr.io/harshitmctpipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
